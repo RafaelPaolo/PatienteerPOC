@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="9" time="234.125">
+ <testsuite name="Navigate to Covid19 Patient List of Patienteer Web App : " timestamp="2020-06-01T07:36:46" hostname="localhost" time="234.125" errors="0" tests="9" skipped="0" disabled="0" failures="0">
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Opens Patienteer Web App Login page" time="25.744" />
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Logs In registered User to Patienteer Web App" time="10.858" />
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Navigates to COVID19 Patient List" time="20.82" />
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Verify that Patient List Table has the correct columns" time="28.742" />
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Filters by suspected" time="35.435" />
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Displays number of patients per Department" time="28.813" />
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Filters by positive" time="28.852" />
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Resets Filters" time="27.884" />
+  <testcase classname="Navigate to Covid19 Patient List of Patienteer Web App : " name="Logs out user from Patienteer Web App" time="26.973" />
+ </testsuite>
+</testsuites>

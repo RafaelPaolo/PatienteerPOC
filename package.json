@@ -1,0 +1,19 @@
+{
+  "name": "protractorpoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "protractor": "^7.0.0",
+    "jasmine": "^3.5.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/protractor conf.js --suites"
+  },
+  "author": "rtonolete",
+  "license": "ISC",
+  "devDependencies": {
+    "protractor-html-reporter-2": "^1.0.4",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
+  }
+}
