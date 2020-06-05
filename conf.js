@@ -23,7 +23,9 @@ exports.config = {
 
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    'shardTestFiles': true,
+    'maxInstances': 2
   },
 
   // Framework to use. Jasmine is recommended.
