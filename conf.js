@@ -33,7 +33,8 @@ exports.config = {
   // protractor is called.
   //specs: ['./Test/covid19PatientList_spec.js'],
   suites: {
-    covid19PatientListTest: './Test/covid19PatientList_spec.js'
+    covid19PatientListTest: './Test/covid19PatientList_spec.js',
+    TOCListTest: './Test/TOCList_spec.js'
 
   },
   // Options to be passed to Jasmine.

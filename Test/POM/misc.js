@@ -10,6 +10,7 @@ let miscfunctions = function () {
 
     let menuLink = element(by.xpath('.//*[text()="Menu"]'));
     let covid19patientlistlink = element(by.xpath('.//*[text()="COVID-19 Patient List "]'));
+    let tocListLink = element(by.css('a[ng-reflect-router-link="/dashboard/tocflowlist"]'));
 
     
 
@@ -36,6 +37,11 @@ let miscfunctions = function () {
         menuLink.click();
         browser.sleep(5000);
         covid19patientlistlink.click();
+    };
+    this.gotoTOCList = function () {
+        menuLink.click();
+        browser.sleep(5000);
+        tocListLink.click();
     };
 
 
