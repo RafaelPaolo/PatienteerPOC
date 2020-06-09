@@ -74,6 +74,8 @@ describe('Navigate to TOC List of Patienteer Web App : ', () => {
         TOCflowList.wardDropdown.click();
         TOCflowList.loadList();
         await browser.driver.sleep(5000);
+        browser.actions().mouseMove(element(by.css('.ui-table-summary'))).perform();
+        await browser.driver.sleep(10000);
 
     });
 
