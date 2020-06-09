@@ -12,7 +12,7 @@ describe('Navigate to TOC List of Patienteer Web App : ', () => {
 
     var originalTimeout;
 
-    beforeEach(function() {
+    beforeEach(function () {
         originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
         jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000000;
     });
@@ -46,7 +46,7 @@ describe('Navigate to TOC List of Patienteer Web App : ', () => {
         });
     });
 
-    it('Navigates to TOC List', async ()=> {
+    it('Navigates to TOC List', async () => {
 
         await browser.driver.sleep(5000);
         misc.gotoTOCList();
@@ -62,8 +62,23 @@ describe('Navigate to TOC List of Patienteer Web App : ', () => {
 
     })
 
-    
-    it('Toggles to SitRep service', async ()=> {
+    it('Loads list according to filter criteria', async () => {
+
+        let tobeUnchecked = 'ACE IP';
+        let tobeChecked = 'Duppas 1';
+        await browser.driver.sleep(5000);
+        TOCflowList.wardDropdown.click();
+        await browser.driver.sleep(2000);
+        TOCflowList.tickFromWardDropdown(tobeUnchecked);
+        TOCflowList.tickFromWardDropdown(tobeChecked);
+        TOCflowList.wardDropdown.click();
+        TOCflowList.loadList();
+        await browser.driver.sleep(5000);
+
+    });
+
+
+    it('Toggles to SitRep service', async () => {
 
         await browser.driver.sleep(5000);
         TOCflowList.toggleToSitRep();
@@ -92,7 +107,7 @@ describe('Navigate to TOC List of Patienteer Web App : ', () => {
     })
 
 
-    it('Toggles to TOC service', async ()=> {
+    it('Toggles to TOC service', async () => {
 
         await browser.driver.sleep(5000);
         TOCflowList.toggleToTOC();
@@ -121,7 +136,7 @@ describe('Navigate to TOC List of Patienteer Web App : ', () => {
 
     })
 
- 
+
 
     it('Logs out user from Patienteer Web App', async function () {
 

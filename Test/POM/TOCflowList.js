@@ -51,13 +51,40 @@ let tocFlowListModule = function () {
         tasks, ECISTcodes, comments, N2Asent, NODsent, NODedd, confirmDTOC, DTOCcode];
     this.TOCcolumnNames = ["Patient", "Location", "Council", "CCG", "LOS", "Known to Team",
         "Cerner EDD", "MFFD", "Tasks", "ECIST Codes", "Comments", "N2A sent", "NOD sent", "NOD EDD",
-         "Confirm DTOC", "DTOC Code"];
+        "Confirm DTOC", "DTOC Code"];
+
+
+
+
+
+
+    //Filters
+    let loadListBtn = element(by.css('.mt-1-3-rem'));
+    this.wardDropdown = element(by.css('angular2-multiselect[name="wardSelected"]'));
+    this.councilDropdown = element(by.css('angular2-multiselect[name="councilselected"]'));
+    this.ccgDropdown = element(by.css('angular2-multiselect[name="ccgselected"]'));
+
 
 
 
 
     //page methods
 
+
+
+    this.tickFromWardDropdown = (ward) => {
+        browser.driver.sleep(3000);
+        element(by.xpath('//li/label[contains(text(),"' + ward + '")]')).click();
+        browser.driver.sleep(3000);
+
+
+    };
+
+    this.loadList = ()=>{
+        browser.driver.sleep(3000);
+        loadListBtn.click();
+        browser.driver.sleep(3000);
+    };
 
 
     this.toggleToTOC = () => {
@@ -71,7 +98,7 @@ let tocFlowListModule = function () {
     };
     this.toggleToSitRep = () => {
         browser.driver.sleep(3000);
-        
+
         servicesOption0.click();
         browser.driver.sleep(3000);
         SiteRepservice.click();
