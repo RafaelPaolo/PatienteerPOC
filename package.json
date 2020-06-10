@@ -8,8 +8,10 @@
     "jasmine": "^3.5.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/protractor conf.js --suite",
-    "testAllSpecs": "./node_modules/.bin/protractor conf.js"
+    "testAll": "./node_modules/.bin/protractor conf.js --suite covid19PatientListTest,TOCListTest",
+    "testCOVID19PatientList": "./node_modules/.bin/protractor conf.js --suite covid19PatientListTest",
+    "testTOCFlowList": "./node_modules/.bin/protractor conf.js --suite TOCListTest"
+
   },
   "author": "rtonolete",
   "license": "ISC",
