@@ -51,10 +51,7 @@ describe('TOC_Flow_List-', () => {
         await browser.driver.sleep(5000);
         misc.gotoTOCList();
         await browser.driver.sleep(5000);
-        // return await browser.driver.getCurrentUrl().then(async function (tocListpageURL) {
-        //     expect(tocListpageURL).toContain('tocflowlist');
-        //     await browser.driver.sleep(5000);
-        // });
+
         return await element(by.css('div.radio-filter.col-md-2.pr-1 > select.custom-select.ng-untouched.ng-pristine.ng-valid')).isPresent().then(async function (tocListToggle) {
             expect(tocListToggle).toBeTruthy();
             await browser.driver.sleep(5000);
@@ -140,7 +137,7 @@ describe('TOC_Flow_List-', () => {
 
 
 
-    it('Logs out user from Patienteer Web App', async function () {
+    it('Logs out user from Patienteer Web App', async ()=> {
 
         await browser.driver.sleep(10000);
         misc.logoutuser();
