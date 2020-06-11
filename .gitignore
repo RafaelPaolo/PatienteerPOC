@@ -7,3 +7,4 @@ node_modules/protractor/node_modules/webdriver-manager/selenium/standalone-respo
 node_modules/protractor/node_modules/webdriver-manager/selenium/update-config.json
 node_modules/protractor/node_modules/webdriver-manager/selenium/chrome-response.xml
 node_modules/protractor/node_modules/webdriver-manager/selenium/gecko-response.json
+screenshots/

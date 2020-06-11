@@ -8,7 +8,7 @@ const { browser, element } = require('protractor');
 
 
 
-describe('Navigate to TOC List of Patienteer Web App : ', () => {
+describe('TOC_Flow_List-', () => {
 
     var originalTimeout;
 
