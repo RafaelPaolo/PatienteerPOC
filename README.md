@@ -1,5 +1,5 @@
 Introduction:
-This is a simple Protractor framework. Java script language basics is required to understand the code.
+This is a simple Protractor Jasmine framework. Java script language basics is required to understand the code.
 The goal of this set up is to perform automated User action test to the Patienteer Web Application to run in latest chrome browser.
 Mostly but not limitted Navigation testing on the Patienteer UI like Log In/Log Out, Opening Patient list module, test filter views, etc.
 (The Proof Of Concept started with Covid19 Patient List module of the Patienteer web application.)
