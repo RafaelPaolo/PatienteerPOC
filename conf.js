@@ -85,6 +85,11 @@ exports.config = {
     });
 
 
+
+    //global variable to toggle if DtaAccuracy testing is required
+    global.forDataAccuracyTest = true;
+    global.TOTALexpectedDisplayedDataCount = 190;
+
   },
 
   // Close the report after all tests finish

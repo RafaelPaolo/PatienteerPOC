@@ -33,7 +33,12 @@ let covid19pmodule = function () {
     this.suspectedsection = element(by.css('.c3-arc-Suspected'));
     this.positivesection = element(by.css('.c3-arc-Positive'));
     this.resetFilters = element(by.css('.font-bold'));
+    
+    //(this label sometimes changes attribute 35,36,11)
+    //this.labelLocationOfPatientsChart = element(by.css('div.card-header > [_ngcontent-c35]'));
+    //this.displayByDepartmentBtn = element(by.css('button[_ngcontent-c35]'));
     this.displayByDepartmentBtn = element(by.css('button[_ngcontent-c36]'));
+    this.labelLocationOfPatientsChart = element(by.css('div.card-header > [_ngcontent-c36]'));
 
 
     //page methods

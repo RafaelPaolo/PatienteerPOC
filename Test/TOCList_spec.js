@@ -74,6 +74,13 @@ describe('TOC_Flow_List-', () => {
         browser.actions().mouseMove(element(by.css('.ui-table-summary'))).perform();
         await browser.driver.sleep(10000);
 
+        //this space is for Data Accuracy test
+        if(forDataAccuracyTest = true)
+        {
+            console.log('this statement was run');
+            //statement to test Data Accuracy given a preloaded data is available
+        }
+
     });
 
 
