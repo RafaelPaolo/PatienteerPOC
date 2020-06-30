@@ -86,8 +86,9 @@ exports.config = {
 
 
 
-    //global variable to toggle if DtaAccuracy testing is required
+    //global variables to toggle if DtaAccuracy testing is required
     global.forDataAccuracyTest = true;
+    //set expected Total number of records in COVID 19 PatientList
     global.TOTALexpectedDisplayedDataCount = 190;
 
   },
