@@ -33,3 +33,6 @@ of preloaded data on global.TOTALexpectedDisplayedDataCount.
 
 Developers may modify or add variables if needed.
 
+Contributors:
+Rap Tonolete(Arcanys)
+
