@@ -25,7 +25,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
 
         await browser.driver.sleep(2000);
         expect(await browser.driver.getTitle()).toEqual("Patienteer Web App");
-        await browser.driver.sleep(10000);
+        await browser.driver.sleep(5000);
 
 
     });
@@ -40,7 +40,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
         loginpage.clicksignin();
 
 
-        await browser.driver.sleep(10000);
+        await browser.driver.sleep(5000);
         browser.ignoreSynchronization = true;
 
 
@@ -65,7 +65,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
 
     it('Verify that Patient List Table has the correct columns', async () => {
 
-        await browser.driver.sleep(5000);
+    
 
         let columnNames = COVID19PatientList.columnNames;
         let columns = COVID19PatientList.columns;
@@ -105,7 +105,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
         expect(columns[16].getText()).toContain(columnNames[16]);
 
 
-        await browser.driver.sleep(5000);
+        await browser.driver.sleep(2000);
 
 
 
@@ -116,7 +116,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
 
 
         COVID19PatientList.filterBySuspected();
-        await browser.driver.sleep(5000);
+        await browser.driver.sleep(2000);
         expect(COVID19PatientList.labelLocationOfPatientsChart.getText()).toContain("Suspected");
 
         //this space is for Data count  Accuracy test
@@ -146,7 +146,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
 
     it('Filters Patient per Location', async () => {
 
-        await browser.driver.sleep(5000);
+        await browser.driver.sleep(2000);
         let bars = element(by.css('g[class=" c3-shapes c3-shapes-Patients c3-bars c3-bars-Patients"]'));
         let patientCounts = element(by.css('g[class=" c3-texts c3-texts-Patients"]'));
         let countText = '';
@@ -169,16 +169,16 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
             let count = countTextObj.get(x);
 
             browser.actions().mouseMove(p).click().perform();
-            await browser.driver.sleep(5000);
+            await browser.driver.sleep(2000);
 
             countText = await count.getText();
-            await browser.driver.sleep(5000);
+            await browser.driver.sleep(1000);
             showingRows = element(by.css('.ui-table-summary')).getText();
             computedTotal = 'Showing ' + countText + ' patients';
-            await browser.driver.sleep(5000);
+            await browser.driver.sleep(2000);
             expect(computedTotal).toEqual(showingRows);
             browser.actions().mouseMove(p).click().perform();
-            await browser.driver.sleep(2000);
+            await browser.driver.sleep(1000);
         };
 
 
@@ -201,12 +201,12 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
     it('Displays number of patients per Department', async () => {
 
         COVID19PatientList.displayNumberOfPatientsByDept();
-        await browser.driver.sleep(5000);
+        await browser.driver.sleep(2000);
         expect(element(by.css('#covidtestinglocationsdetails')).isDisplayed()).toBeTruthy();
 
 
         browser.actions().sendKeys(protractor.Key.ESCAPE).perform();
-        await browser.driver.sleep(10000);
+        await browser.driver.sleep(2000);
 
 
     })
@@ -215,7 +215,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
     it('Filters by positive', async () => {
 
         COVID19PatientList.filterByPositive();
-        await browser.driver.sleep(5000);
+        await browser.driver.sleep(2000);
         expect(COVID19PatientList.labelLocationOfPatientsChart.getText()).toContain("Positive");
 
         //this space is for Data count  Accuracy test
@@ -246,7 +246,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
 
     it('Filters Patient per Location', async () => {
 
-        await browser.driver.sleep(5000);
+        await browser.driver.sleep(2000);
         let bars = element(by.css('g[class=" c3-shapes c3-shapes-Patients c3-bars c3-bars-Patients"]'));
         let patientCounts = element(by.css('g[class=" c3-texts c3-texts-Patients"]'));
         let countText = '';
@@ -267,23 +267,23 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
             let count = countTextObj.get(x);
 
             browser.actions().mouseMove(p).click().perform();
-            await browser.driver.sleep(5000);
+            await browser.driver.sleep(2000);
 
             countText = await count.getText();
-            await browser.driver.sleep(5000);
+            await browser.driver.sleep(1000);
             showingRows = element(by.css('.ui-table-summary')).getText();
             computedTotal = 'Showing ' + countText + ' patients';
-            await browser.driver.sleep(5000);
+            await browser.driver.sleep(2000);
             expect(computedTotal).toEqual(showingRows);
             browser.actions().mouseMove(p).click().perform();
-            await browser.driver.sleep(2000);
+            await browser.driver.sleep(1000);
         };
 
     });
 
     it('Resets Filters', async () => {
 
-        await browser.driver.sleep(5000);
+        await browser.driver.sleep(2000);
         COVID19PatientList.clearFilters();
         await browser.driver.sleep(5000);
 
@@ -291,7 +291,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
 
     it('Logs out user from Patienteer Web App', async () => {
 
-        await browser.driver.sleep(5000);
+
         misc.logoutuser();
         await browser.driver.sleep(2000);
         expect(await browser.driver.getCurrentUrl()).toContain("login");
