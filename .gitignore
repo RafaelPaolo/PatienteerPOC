@@ -1,6 +1,5 @@
 debug.log
 screenshotsReport/
-.vscode/
 ProtractorTestReport.html
 xmlresults.xml
 node_modules/protractor/node_modules/webdriver-manager/selenium/standalone-response.xml
