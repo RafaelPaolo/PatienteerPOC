@@ -15,9 +15,9 @@ The Protractor framework is set up and developed using Visual Studio Code. The n
 4. Update chrome by opening a terminal in VSC (run in terminal inside main directory: node node_modules/protractor/bin/webdriver-manager update). This will update the chrome version used by your workspace.
 
 Build and Test:
-1.To run test you may open terminal then "npm test testSpectoTest" (ex. npm test covid19PatientListTest). 
-2.The NPM SCRIPTS are set in package.json file so that you can just click the test run you wish to execute. This will directly run test in terminal and you must press any key to close the terminal when finished executing.
-3.Test reporter summarizes the test run. You may view this by opening ProtractorTestReport.html in a browser (If a step fails it should show a screenshot)
+1. To run test you may open terminal then "npm test testSpectoTest" (ex. npm test covid19PatientListTest). 
+2. The NPM SCRIPTS are set in package.json file so that you can just click the test run you wish to execute. This will directly run test in terminal and you must press any key to close the terminal when finished executing.
+3. Test reporter summarizes the test run. You may view this by opening ProtractorTestReport.html in a browser (If a step fails it should show a screenshot)
 
 Debugging:
 Debugging is a bit primitive for Protractor. You may refer to https://www.protractortest.org/ 
