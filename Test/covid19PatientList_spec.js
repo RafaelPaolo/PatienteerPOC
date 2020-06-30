@@ -23,7 +23,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
         await browser.driver.get('http://52.147.45.189:9008');
         //browser.driver.ignoreSynchronization = true;
 
-        await browser.driver.sleep(2000);
+        await browser.driver.sleep(1000);
         expect(await browser.driver.getTitle()).toEqual("Patienteer Web App");
         await browser.driver.sleep(5000);
 
@@ -66,7 +66,7 @@ describe('Navigate to Covid19 Patient List of Patienteer Web App : ', () => {
     it('Verify that Patient List Table has the correct columns', async () => {
 
     
-
+        await browser.driver.sleep(2000);
         let columnNames = COVID19PatientList.columnNames;
         let columns = COVID19PatientList.columns;
 
