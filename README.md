@@ -28,7 +28,8 @@ Debugging is a bit primitive for Protractor. You may refer to https://www.protra
 
 Data Accuracy test:
 Global variables are set inside conf.js under OnPrepare
-set global.forDataAccuracyTest to TRUE if for Data Accuracy testing the specify the expected record count of preloaded data on global.TOTALexpectedDisplayedDataCount.
+set global.forDataAccuracyTest to TRUE if for Data Accuracy testing then specify the expected record count 
+of preloaded data on global.TOTALexpectedDisplayedDataCount.
 
 Developers may modify or add variables if needed.
 
